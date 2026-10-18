@@ -4,7 +4,7 @@
 // Swaps 2 chars in a string. 
 // Returns 1 if they needed to swap, 0 if they were already matching
 int swap (char str[], int first, int second) {
-    if (str[first] = str[second]) {         
+    if (str[first] == str[second]) {         
         return 0;
     }
 
@@ -21,7 +21,7 @@ int reverse(char str[]) {
     int num_swaps = 0;
 
     // Stop when i and j meet in the middle
-    while (i != j) {
+    while (i < j) {
         num_swaps += swap(str, i, j);
         i++;
         j--;
