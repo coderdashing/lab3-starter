@@ -5,7 +5,7 @@
 // If char is a-z, returns uppercase version.
 // Otherwise, returns it unchanged
 char capitalize_char(char ch) {
-    if ('a' <= ch <= 'z') {
+    if ('a' <= ch && ch <= 'z') {
         ch -= 32;  // uppercase and lowercase ascii is 32 apart
     }
     return ch;
@@ -15,9 +15,9 @@ char capitalize_char(char ch) {
 // Takes a string, uppercases every other character
 // e.g. "hello world" -> "HeLlO WoRlD"
 void alternate_caps(char str[]) {
-    int len = strlen(str);
+    int len = (int)strlen(str);
 
-    for(int i = 0; i != len; i += 2) {
+    for(int i = 0; i != len; i += 1) {
         str[i] = capitalize_char(str[i]);
     }
 }
